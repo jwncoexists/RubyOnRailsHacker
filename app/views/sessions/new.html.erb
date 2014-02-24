@@ -1,0 +1,29 @@
+<div class="container">
+  <section id="login-form">
+    <h1><i class="fa fa-gear fa-spin"></i> ruby on rails <span>hacker</span></h1>
+    <%= form_tag sessions_create_path, role: 'form', :method => :get do %>
+      <div class="form-group">
+          <div class="input-group login-input">
+              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+              <%= text_field_tag :email, params[:email], size: 40, id: 'login-email-page', autofocus: true, class: 'form-control email',  placeholder: 'email', required: true %>
+          </div>
+
+          <div class="input-group login-input">
+              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+              <%= password_field_tag :password, params[:password], size: 40, id: 'login-password-page', class: 'form-control password', placeholder: 'password', required: true  %>
+          </div>
+          <%= submit_tag "Login", id: 'login', class: "btn btn-primary pull-right"  %>
+      </div>
+
+    </form>
+  </section>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('.hover').bind('touchstart', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('cs-hover');
+    });
+});
+</script>

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Rorhacker::Application.config.secret_key_base = '51ded8c7c0d98cc190c43f9b8148b7ba14d6a7d41cff53ecad888a5503fb0803b9e8f48256915ce5656867d46c7a9ccfc56dbc1375b68c25cb60f1f7fd857196'
+Rorhacker::Application.config.secret_key_base = ENV['SECRET_TOKEN']

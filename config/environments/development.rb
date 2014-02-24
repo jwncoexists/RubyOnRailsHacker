@@ -26,4 +26,14 @@ Rorhacker::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address        => ENV['EMAIL_SMTPSRVR'],
+    :port           => ENV['EMAIL_PORT'],
+    :authentication => :plain,
+    :user_name      => ENV['EMAIL_USERNAME'],
+    :password       => ENV['EMAIL_PASSWORD'],
+    :domain         => ENV['EMAIL_DOMAIN'],
+    :enable_starttls_auto => true   }
 end

@@ -1,4 +1,23 @@
 Rorhacker::Application.routes.draw do
+
+  root to: 'blog#index'
+
+  resources :users
+  resources :blogs do
+    resources :sections, except: [:index]
+  end
+  resources :email_confirmations
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  get "sessions/create"
+  get "sessions/destroy"
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

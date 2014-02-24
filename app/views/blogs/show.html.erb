@@ -1,0 +1,333 @@
+<header class="page-title">
+    <div class="container">
+        <h1>Blog</h1>
+        <ol class="breadcrumb">
+          <% if can? :manage, Blog %>        
+              <li><%= link_to 'Edit', edit_blog_path(@blog) %></li>        
+          <% end %>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Back', blogs_path %></li>
+        </ol>
+    </div> <!-- container -->
+</header>
+
+<div class="container">
+     <div class="row">
+        <div class="col-md-8">
+            <section class="single">
+                <h1><%= @blog.title %></h1>
+
+                <div class="single-info">
+                    <span class="date"><i class="fa fa-clock-o"></i> <%= @blog.date %></span> | <span class="author"><i class="fa fa-user"></i> Jennifer Nelson</span>
+                    <span class="num-comments pull-right"><i class="fa fa-comments"></i> <a href="#">8 Comments</a></span>
+                </div>
+                
+                <img src="img/sample/3.jpg" class="img-responsive img-feature" alt="Image">
+                
+                <p>Lorem ipsum Irure ut ut culpa dolore voluptate aliquip in aliquip commodo velit cillum minim exercitation occaecat ullamco veniam enim do occaecat aliqua consequat sed fugiat cillum Excepteur ea ut enim amet anim eiusmod ut ea consectetur labore consectetur laborum laboris dolore in dolor in est in ex esse in aliquip Ut nisi voluptate irure cupidatat elit aliqua ut tempor adipisicing qui magna id eu ea do minim aliquip occaecat dolore ullamco sit cillum nisi culpa sed adipisicing id do do velit aute velit nisi commodo aliquip nisi in pariatur ex est anim fugiat magna eiusmod in labore consequat mollit enim velit qui sit in <strong>consectetur ex reprehenderit</strong> consectetur est labore est dolore consequat ullamco id dolore dolore exercitation Excepteur qui velit magna eu non exercitation aliqua.</p>
+
+                <p> velit eu adipisicing sunt ut esse ea deserunt cupidatat tempor occaecat qui aute occaecat in eu consectetur ut eiusmod sit in in irure veniam sint sed minim ut ad amet minim qui dolor et reprehenderit aliqua velit irure mollit voluptate pariatur ut dolore sint ut aliquip veniam in id adipisicing anim ut sed enim id ex Excepteur in qui nisi Duis sit deserunt labore consequat est eu velit sint dolor esse Ut laborum in dolor velit Duis laborum sint irure ea esse eu voluptate consequat qui et Duis minim veniam minim tempor id dolor nulla dolor sunt quis dolore sit amet minim aliquip magna amet officia eu velit velit eu dolore aute dolore Duis in magna esse dolor cupidatat pariatur mollit elit ea elit Ut aliquip consequat dolor voluptate culpa Excepteur veniam laboris sunt cillum.</p>
+
+                <ul>
+                    <li>Lorem ipsum Ut qui ea sunt veniam.</li>
+                    <li>Excepteur anim laborum esse et.</li>
+                    <li>Cillum ipsum Cillum sed ullamco enim.</li>
+                    <li>Lorem ipsum Sed sit do dolor in.</li>
+                    <li>Ut veniam lorem ipsum  ex dolore.</li>
+                </ul>
+
+                <p>Donec velit purus, dapibus id quam eget, vehicula fringilla odio. Curabitur fermentum justo eget dui feugiat dignissim. Aenean ultrices ultrices orci ut laoreet. Integer dignissim tellus turpis, non lacinia sapien fringilla vel. Quisque ultrices mi quis risus ullamcorper, vitae pretium diam volutpat. Cras aliquet leo a magna volutpat, eu faucibus odio hendrerit. Sed sed pellentesque quam. Aenean id nunc dictum, congue lacus ac, faucibus diam. Quisque ornare sem nec magna ultricies porta. Integer tincidunt nunc nec metus rutrum, sed aliquet massa adipiscing. Maecenas libero neque, malesuada sed placerat et, bibendum et lorem. Nullam ullamcorper fringilla rhoncus. Vivamus semper dui et vulputate tempus. Nulla rutrum aliquam tortor ac accumsan. Maecenas tempus et urna vel condimentum.</p>
+
+                <h3>Lorem ipsum In consectetur quis sint enim.</h3>
+
+                <p>Sed posuere metus a aliquam tincidunt. Donec augue dolor, hendrerit sit amet posuere quis, commodo in justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida, nunc et condimentum pharetra, lorem sapien volutpat sem, sed consectetur lacus lectus eu metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nec tellus eget mauris mattis posuere. Pellentesque porta at massa eget venenatis. Sed consectetur justo sed nulla vulputate venenatis. Aenean odio arcu, venenatis quis nisl sit amet, hendrerit bibendum lacus. In hac habitasse platea dictumst. Sed enim dui, pulvinar vel metus at, feugiat rhoncus ipsum.</p>
+
+                <p>Nam suscipit ligula purus, venenatis fermentum elit egestas et. Sed bibendum purus nec elit euismod tristique. Morbi id viverra sem. Vestibulum sed tortor auctor arcu varius molestie. Curabitur suscipit ligula eget ipsum vehicula tristique. Sed pretium erat vitae est tempus, non hendrerit nunc blandit. Nullam non fermentum augue. Fusce venenatis sapien lacus, eu mattis lorem egestas ac. Duis lobortis vel ligula a bibendum.</p>
+            </section> <!-- single -->
+
+            <section class="comments">
+                <h2  class="section-title">Comments</h2>
+                <ul class="media-list">
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://lorempixel.com/80/80/people/" alt="">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                User Name
+                                <span>2 hours ago / <a href="#">reply</a>Lorem ipsum Excepteur mollit enim adipisicing ex.</span>
+                            </h4>
+                            <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="img/no_image.png" alt="">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                User Name
+                                <span>8 hours ago / <a href="#">reply</a></span>
+                            </h4>
+                            <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="http://lorempixel.com/80/80/fashion/" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        User Name
+                                        <span>3 hours ago / <a href="#">reply</a></span>
+                                    </h4>
+                                    <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/no_image.png" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        User Name
+                                        <span>6 hours ago / <a href="#">reply</a></span>
+                                    </h4>
+                                    <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://lorempixel.com/80/80/sports/" alt="">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                User Name
+                                <span>3 days ago / <a href="#">reply</a></span>
+                            </h4>
+                            <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="http://lorempixel.com/80/80/nightlife/" alt="">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">
+                                        User Name
+                                        <span>2 weeks ago / <a href="#">reply</a></span>
+                                    </h4>
+                                    <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="img/no_image.png" alt="">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                User Name
+                                <span>3 days ago / <a href="#">reply</a></span>
+                            </h4>
+                            <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                        </div>
+                    </li>
+                    <li class="media comment">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://lorempixel.com/80/80/city/" alt="">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">
+                                User Name
+                                <span>3 days ago / <a href="#">reply</a></span>
+                            </h4>
+                            <p>Lorem ipsum Consequat anim veniam laboris enim minim reprehenderit Duis sed Duis amet Ut consectetur sed quis sit deserunt dolore in magna consequat in nulla cillum aliqua ullamco occaecat voluptate qui laboris voluptate consectetur officia Duis adipisicing.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section> <!-- comments -->
+
+            <section class="comment-form">
+                <h2  class="section-title">Leave a Comment</h2>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="email" class="form-control" id="inputName" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="example@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputMessage">Mesagge</label>
+                        <textarea class="form-control"  id="inputMessage" rows="6"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section> <!-- comment-form -->
+
+        </div> <!-- col-md-8 -->
+        <div class="col-md-4">
+            <aside class="sidebar">
+                <div class="block">
+                    <div class="input-group">
+                      <input type="text" placeholder="Search..." class="form-control">
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+                      </span>
+                    </div><!-- /input-group -->
+                </div>
+
+                <div class="block">
+                    <ul class="nav nav-tabs nav-tabs-robotic nav-tabs-simple-2" id="myTab2">
+                        <li class="active"><a href="#fav" data-toggle="tab"><i class="fa fa-star"></i></a></li>
+                        <li><a href="#categories" data-toggle="tab"><i class="fa fa-folder-open"></i></a></li>
+                        <li><a href="#archive" data-toggle="tab"><i class="fa fa-clock-o"></i></a></li>
+                        <li><a href="#tags" data-toggle="tab"><i class="fa fa-tags"></i></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="fav">
+                            <h3>Favorite Post</h3>
+                            <ul class="post-sidebar">
+                                <li>
+                                    <img src="img/sample/t1.jpg" class="img-responsive" alt="Image">
+                                    <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
+                                    <span class="date">12 Apr 2012, 3 comments</span>
+                                </li>
+                                <li>
+                                    <img src="img/sample/t2.jpg" class="img-responsive" alt="Image">
+                                    <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
+                                    <span class="date">12 Apr 2012, 3 comments</span>
+                                </li>
+                                <li>
+                                    <img src="img/sample/t3.jpg" class="img-responsive" alt="Image">
+                                    <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
+                                    <span class="date">12 Apr 2012, 3 comments</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="categories">
+                            <h3>Categories</h3>
+                            <ul class="simple">
+                                <li><a href="#">Game Programming</a></li>
+                                <li><a href="#">Artificial Intelligence</a>
+                                    <ul>
+                                        <li><a href="#">Artificial Life</a></li>
+                                        <li><a href="#">Neural Networks</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Resources</a></li>
+                                <li><a href="#">Web Developer</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="archive">
+                            <h3>Archives</h3>
+                            <ul class="simple">
+                                <li><a href="#">December 2012</a></li>
+                                <li><a href="#">January 2013</a></li>
+                                <li><a href="#">February 2013</a></li>
+                                <li><a href="#">March 2013</a></li>
+                                <li><a href="#">April 2013</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="tags">
+                            <h3>Tags</h3>
+                            <div class="tags-cloud">
+                                <a href="#" class="tag">Web</a>
+                                <a href="#" class="tag">Artificial Intelligence</a>
+                                <a href="#" class="tag">Programing</a>
+                                <a href="#" class="tag">Design</a>
+                                <a href="#" class="tag">3D</a>
+                                <a href="#" class="tag">Games</a>
+                                <a href="#" class="tag">Resources</a>
+                                <a href="#" class="tag">2D</a>
+                                <a href="#" class="tag">C++</a>
+                                <a href="#" class="tag">Jquery</a>
+                                <a href="#" class="tag">Javascript</a>
+                                <a href="#" class="tag">Library</a>
+                                <a href="#" class="tag">Windows</a>
+                                <a href="#" class="tag">Linux</a>
+                                <a href="#" class="tag">Cloud</a>
+                                <a href="#" class="tag">Game developer</a>
+                                <a href="#" class="tag">Server</a>
+                                <a href="#" class="tag">Google</a>
+                                <a href="#" class="tag">Bootstrap</a>
+                                <a href="#" class="tag">Less</a>
+                                <a href="#" class="tag">Sass</a>
+                                <a href="#" class="tag">Engine</a>
+                                <a href="#" class="tag">Node.js</a>
+                            </div>
+                        </div>
+                    </div> <!-- tab-content -->
+                </div>
+
+                <div class="block">
+                    <h2><i class="fa fa-play-circle"></i>Featured video</h2>
+                    <div class="video">
+                        <iframe src="http://player.vimeo.com/video/18554749"></iframe>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <h2><i class="fa fa-comments"></i> Recent Comments</h2>
+                    <ul class="comments-sidebar">
+                        <li>
+                            <img src="img/sample/client.jpg" class="img-responsive" alt="Image">
+                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
+                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
+                        </li>
+                        <li>
+                            <img src="img/sample/client2.jpg" class="img-responsive" alt="Image">
+                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
+                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
+                        </li>
+                        <li>
+                            <img src="img/sample/client6.jpg" class="img-responsive" alt="Image">
+                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
+                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
+                        </li>
+                        <li>
+                            <img src="img/sample/client4.jpg" class="img-responsive" alt="Image">
+                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
+                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
+                        </li>
+                        <li>
+                            <img src="img/sample/client5.jpg" class="img-responsive" alt="Image">
+                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
+                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside> <!-- Sidebar -->
+        </div> <!-- col-md-4 -->
+    </div> <!-- row -->
+</div> <!-- container -->
+
+
+
+
+
+
+
+
+
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @blog.image %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @blog.user %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>

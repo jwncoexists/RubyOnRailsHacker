@@ -77,4 +77,17 @@ Rorhacker::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+    # to get vendor images to display on heroku production
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address        => ENV['EMAIL_SMTPSRVR'],
+    :port           => ENV['EMAIL_PORT'],
+    :authentication => :plain,
+    :user_name      => ENV['EMAIL_USERNAME'],
+    :password       => ENV['EMAIL_PASSWORD'],
+    :domain         => ENV['EMAIL_DOMAIN'],
+    :enable_starttls_auto => true   }
 end
