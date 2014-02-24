@@ -1,10 +1,10 @@
 Rorhacker::Application.routes.draw do
 
-  root to: 'blog#index'
+  root to: 'blogs#index'
 
   resources :users
   resources :blogs do
-    resources :sections, except: [:index]
+    resources :sections, except: [:index], controller: 'blogs/sections'
   end
   resources :email_confirmations
   controller :sessions do

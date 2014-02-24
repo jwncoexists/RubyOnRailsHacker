@@ -1,4 +1,4 @@
-class SectionsController < ApplicationController
+class Blogs::SectionsController < ApplicationController
   def index
   end
 
