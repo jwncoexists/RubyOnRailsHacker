@@ -3,9 +3,8 @@ Rorhacker::Application.routes.draw do
   root to: 'blogs#index'
 
   resources :users
-  resources :blogs do
-    resources :sections, except: [:index], controller: 'blogs/sections'
-  end
+  resources :blogs
+
   resources :email_confirmations
   controller :sessions do
     get 'login' => :new

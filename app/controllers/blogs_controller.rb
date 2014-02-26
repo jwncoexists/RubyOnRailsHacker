@@ -15,6 +15,7 @@ class BlogsController < ApplicationController
   # GET /blogs/new
   def new
     @blog = Blog.new
+    @section = @blog.sections.build
   end
 
   # GET /blogs/1/edit
@@ -69,6 +70,7 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :image, :user)
+      params.require(:blog).permit(:id, :title, :image, :intro, :user_id, :released, :created_at, :updated_at,
+            sections_attributes: [:id, :type, :title, :body, :image, :sequence, :created_at, :updated_at, :_destroy] )
     end
 end

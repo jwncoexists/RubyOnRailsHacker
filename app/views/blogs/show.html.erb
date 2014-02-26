@@ -18,31 +18,24 @@
                 <h1><%= @blog.title %></h1>
 
                 <div class="single-info">
-                    <span class="date"><i class="fa fa-clock-o"></i> <%= @blog.date %></span> | <span class="author"><i class="fa fa-user"></i> Jennifer Nelson</span>
+                    <span class="date"><i class="fa fa-clock-o"></i> <%= @blog.created_at %></span> | <span class="author"><i class="fa fa-user"></i> Jennifer Nelson</span>
                     <span class="num-comments pull-right"><i class="fa fa-comments"></i> <a href="#">8 Comments</a></span>
                 </div>
                 
                 <img src="img/sample/3.jpg" class="img-responsive img-feature" alt="Image">
-                
-                <p>Lorem ipsum Irure ut ut culpa dolore voluptate aliquip in aliquip commodo velit cillum minim exercitation occaecat ullamco veniam enim do occaecat aliqua consequat sed fugiat cillum Excepteur ea ut enim amet anim eiusmod ut ea consectetur labore consectetur laborum laboris dolore in dolor in est in ex esse in aliquip Ut nisi voluptate irure cupidatat elit aliqua ut tempor adipisicing qui magna id eu ea do minim aliquip occaecat dolore ullamco sit cillum nisi culpa sed adipisicing id do do velit aute velit nisi commodo aliquip nisi in pariatur ex est anim fugiat magna eiusmod in labore consequat mollit enim velit qui sit in <strong>consectetur ex reprehenderit</strong> consectetur est labore est dolore consequat ullamco id dolore dolore exercitation Excepteur qui velit magna eu non exercitation aliqua.</p>
 
-                <p> velit eu adipisicing sunt ut esse ea deserunt cupidatat tempor occaecat qui aute occaecat in eu consectetur ut eiusmod sit in in irure veniam sint sed minim ut ad amet minim qui dolor et reprehenderit aliqua velit irure mollit voluptate pariatur ut dolore sint ut aliquip veniam in id adipisicing anim ut sed enim id ex Excepteur in qui nisi Duis sit deserunt labore consequat est eu velit sint dolor esse Ut laborum in dolor velit Duis laborum sint irure ea esse eu voluptate consequat qui et Duis minim veniam minim tempor id dolor nulla dolor sunt quis dolore sit amet minim aliquip magna amet officia eu velit velit eu dolore aute dolore Duis in magna esse dolor cupidatat pariatur mollit elit ea elit Ut aliquip consequat dolor voluptate culpa Excepteur veniam laboris sunt cillum.</p>
+                <% if @blog.intro %>
+                  <p><%= markdown @blog.intro %></p>
+                <% end %>
 
-                <ul>
-                    <li>Lorem ipsum Ut qui ea sunt veniam.</li>
-                    <li>Excepteur anim laborum esse et.</li>
-                    <li>Cillum ipsum Cillum sed ullamco enim.</li>
-                    <li>Lorem ipsum Sed sit do dolor in.</li>
-                    <li>Ut veniam lorem ipsum  ex dolore.</li>
-                </ul>
-
-                <p>Donec velit purus, dapibus id quam eget, vehicula fringilla odio. Curabitur fermentum justo eget dui feugiat dignissim. Aenean ultrices ultrices orci ut laoreet. Integer dignissim tellus turpis, non lacinia sapien fringilla vel. Quisque ultrices mi quis risus ullamcorper, vitae pretium diam volutpat. Cras aliquet leo a magna volutpat, eu faucibus odio hendrerit. Sed sed pellentesque quam. Aenean id nunc dictum, congue lacus ac, faucibus diam. Quisque ornare sem nec magna ultricies porta. Integer tincidunt nunc nec metus rutrum, sed aliquet massa adipiscing. Maecenas libero neque, malesuada sed placerat et, bibendum et lorem. Nullam ullamcorper fringilla rhoncus. Vivamus semper dui et vulputate tempus. Nulla rutrum aliquam tortor ac accumsan. Maecenas tempus et urna vel condimentum.</p>
-
-                <h3>Lorem ipsum In consectetur quis sint enim.</h3>
-
-                <p>Sed posuere metus a aliquam tincidunt. Donec augue dolor, hendrerit sit amet posuere quis, commodo in justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida, nunc et condimentum pharetra, lorem sapien volutpat sem, sed consectetur lacus lectus eu metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris nec tellus eget mauris mattis posuere. Pellentesque porta at massa eget venenatis. Sed consectetur justo sed nulla vulputate venenatis. Aenean odio arcu, venenatis quis nisl sit amet, hendrerit bibendum lacus. In hac habitasse platea dictumst. Sed enim dui, pulvinar vel metus at, feugiat rhoncus ipsum.</p>
-
-                <p>Nam suscipit ligula purus, venenatis fermentum elit egestas et. Sed bibendum purus nec elit euismod tristique. Morbi id viverra sem. Vestibulum sed tortor auctor arcu varius molestie. Curabitur suscipit ligula eget ipsum vehicula tristique. Sed pretium erat vitae est tempus, non hendrerit nunc blandit. Nullam non fermentum augue. Fusce venenatis sapien lacus, eu mattis lorem egestas ac. Duis lobortis vel ligula a bibendum.</p>
+                <% @blogs.sections.each do |section| %>
+                  <% if section.title %>
+                    <h4 class="media-heading">
+                      <%= section.title %>
+                    </h4>
+                  <% end %>               
+                  <p><%= markdown section.body %></p>
+                <% end %>
             </section> <!-- single -->
 
             <section class="comments">

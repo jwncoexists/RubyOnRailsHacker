@@ -11,6 +11,11 @@ class SessionsController < ApplicationController
         redirect_to :back
       elsif user.authenticate(params[:password])
         session[:user_id] = user.id
+        if params[:remember_me]
+          cookies.permanent[:token] = user.token
+        else
+          cookies[:token] = user.token
+        end
         redirect_to blogs_path, notice: "You are now logged in to Ruby on Rails Hacker."
       else
         flash[:alert] =  "Invalid user/password combination."
@@ -24,6 +29,8 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    cookies.delete(:token)
     redirect_to root_path, notice: "You are now logged out."
   end
+
 end

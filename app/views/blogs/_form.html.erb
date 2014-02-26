@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-10">
       <div class="register-form">
         <%= form_for @blog, html: {role: "form"} do |f| %>
             <div class="form-group">
@@ -19,30 +19,19 @@
                   <%= f.label :released, for: "InputBlogReleased" %>
                   <%= f.check_box :released, class: "form-control", id: "InputBlogReleased" %>
             </div>
+            <%= f.fields_for :sections do |section| %>
+              <%= render 'section_fields', f: section %>
+            <% end %>
+            <%= link_to_add_fields "Add Section", f, :sections %>
             <div class="row">
-                <div class="col-md-6">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> I read <a href="#">Terms and Conditions</a>.
-                    </label>
-                </div>
                 <div class="col-md-6">
                     <%= f.submit "Save", class: "btn btn-primary pull-right" %>
                 </div>
             </div>
         <% end %>
       </div>
-  </div> <!-- col-md-6 -->
-  <div class="col-md-6">
-      <div class="register-terms">
-          <h2>Terms and Conditions</h2>
-          <ol>
-              <li>Lorem ipsum Sunt adipisicing sit laboris ut do esse commodo fugiat incididunt deserunt dolor consectetur commodo non veniam dolor laborum laborum cupidatat eu elit ad aliquip sit adipisicing.</li>
-              <li>Reprehenderit cillum dolore in eiusmod dolor quis ad minim anim fugiat labore et nisi in officia do sint pariatur est sunt culpa sint dolore sint ut fugiat deserunt adipisicing Excepteur deserunt in est dolore reprehenderit deserunt sit magna sunt deserunt velit non et et consectetur ut voluptate irure dolore aliquip nulla dolor ad occaecat veniam nostrud quis tempor mollit culpa velit in sed.</li>
-              <li>Incididunt in in elit occaecat ut reprehenderit in sed sunt elit eu in ex eu est aute Ut reprehenderit mollit incididunt incididunt dolor eu dolor laborum nisi officia amet veniam magna sint ea in ut elit dolor esse non Ut esse proident magna Ut exercitation Excepteur sunt sint</li>
-              <li>Labore mollit voluptate sunt elit reprehenderit velit pariatur sed anim voluptate adipisicing aliqua adipisicing ut ea pariatur ea quis irure Excepteur nulla in est nulla aliquip minim elit veniam reprehenderit elit eu reprehenderit cillum qui.</li>
-          </ol>
-      </div>
     </div> <!-- col-md-6 -->
+  
   </div>
 </div> <!-- container -->
 

@@ -1,6 +1,13 @@
-<h1>Editing blog</h1>
-
+<header class="page-title">
+    <div class="container">
+        <h1>Edit Blog</h1>
+        <ol class="breadcrumb">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Show', @blog %></li>
+          <li><%= link_to 'Back', blogs_path %></li>
+        </ol>
+      </div>
+    </div> <!-- container -->
+</header>
 <%= render 'form' %>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>

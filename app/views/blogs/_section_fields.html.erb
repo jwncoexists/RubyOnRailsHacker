@@ -1,0 +1,13 @@
+<fieldset>
+  <div class="form-group">
+    <%= f.label :title, "Title", for: "InputSectionTitle"  %><br/>
+    <%= f.text_area :title, id: "InputSectionTitle", cols: 110, autofocus: true %><br/>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, "Body", or: "InputSectionBody" %><br/>
+    <%= f.text_area :body, id: "InputSectionBody", rows: 5, cols: 110  %><br/>
+  </div>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Section" %>
+</fieldset>
+<br>

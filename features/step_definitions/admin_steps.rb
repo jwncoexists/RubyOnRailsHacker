@@ -15,7 +15,7 @@ Given(/^I log in as the administrator named "(.*?)"$/) do |name|
   fill_in 'login-email-page', with: 'admin@example.com'
   fill_in 'login-password-page', with: 'letmeinplease'
 
-  within_fieldset 'login-page' do
+  within_fieldset 'login-form-fieldset' do
     click_button('Login')
   end
   page.should have_selector ".alert", text: "You are now logged in to Ruby on Rails Hacker."
@@ -23,7 +23,7 @@ Given(/^I log in as the administrator named "(.*?)"$/) do |name|
 end
 
 Then(/^I can see links to administrative functions$/) do
-  pending # express the regexp above with the code you wish you had
+    expect(page).to have_content "New"
 end
 
 Given(/^an existing blog named "(.*?)" with a Markdown Section named "(.*?)"$/) do |arg1, arg2|
