@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140222204740) do
+ActiveRecord::Schema.define(version: 20140227195937) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -21,20 +21,8 @@ ActiveRecord::Schema.define(version: 20140222204740) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "released",   default: false
-  end
-
-  create_table "sections", force: true do |t|
-    t.integer  "blog_id"
-    t.string   "type"
-    t.string   "title"
-    t.string   "image"
     t.text     "body"
-    t.integer  "sequence"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
-
-  add_index "sections", ["blog_id"], name: "index_sections_on_blog_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",           null: false

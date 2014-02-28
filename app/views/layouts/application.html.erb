@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="RoRHacker">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,13 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
 </head>
+<body>
 
   <!-- Setting Options -->
   <!-- boxed container -->
@@ -36,7 +41,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="blog.html">Blog right sidebar</a></li>
+                            <li><a href=<%= blogs_path %>>Blog List</a></li>
                             <li><a href="blog_left.html">Blog left sidebar</a></li>
                             <li><a href="blog_full.html">Blog full</a></li>
                             <li class="divider"></li>
@@ -44,7 +49,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <a href=<%= about_path %>>About </a>
                         <ul class="dropdown-menu">
                             <li><a href="portfolio.html">Portfolio Page</a></li>
                             <li><a href="portfolio_item.html">Portfolio Item</a></li>
@@ -66,8 +71,6 @@
     <%= yield %>
     <%= render 'bottom' %>
 
-
-
   </div> <!-- boxed -->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -78,6 +81,7 @@
   <script src="js/transicion.js"></script>
   <script src="js/holder.js"></script>
   <script src="js/styleswitcher.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
   
   <script>
   $(document).ready(function() {
@@ -87,6 +91,12 @@
       });
   });
   </script>
+  
+  <script>
+      $('#carousel-clients-say').carousel()
+      $('#carousel-home').carousel()
+  </script>
+
 
 </body>
 </html>

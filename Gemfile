@@ -29,9 +29,13 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'cancan'
 gem 'figaro'
-gem 'redcarpet'
+gem 'redcarpet', '~> 2.1.1'
+gem 'coderay', '~> 1.0.7'
+
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'angularjs-rails'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -22,27 +22,6 @@ Feature: admin manage blogs page
     And change the blog name to "Behaviour Driven Development"
     Then the name of the blog is stored
 
-  Scenario: I can add a markdown section to an existing blog
-    Given a blog named "BDD Overview"
-    When I edit the blog named "BDD Overview" blog
-    And add a Markdown Section to the blog
-    And add a title "Cucumber" and text "Pickle" to the Markdown Section
-    Then the Markdown Section with title "Cucumber" and text "Pickle" is stored in the blog
-
-    Scenario: I can add an image section to an existing blog
-    Given a blog named "BDD Overview"
-    When I edit the blog named "BDD Overview" blog
-    And add a Big Image Section to the blog
-    And add a title named "Cucumber" and Image "Pickle" to the Big Image Section
-    Then the Big Image Section with title "Cucumber" and image "Cucumber" is stored in the blog
-
-  Scenario: I can add a code section to an existing blog
-    Given a blog named "BDD Overview"
-    When I edit the blog named "BDD Overview" blog
-    And add a Code Section to the blog
-    And add a title named "Blog Controller" and code "class BlogController" to the Section 
-    Then the Code Section with title "Blog Controller" and code "class BlogController < ApplicationController end" is stored in the blog
-
   Scenario: I can delete a blog
     Given a blog named "BDD Overview"
     When I edit the blog named "BDD Overview" blog

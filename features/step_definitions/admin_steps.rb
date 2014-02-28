@@ -26,9 +26,6 @@ Then(/^I can see links to administrative functions$/) do
     expect(page).to have_content "New"
 end
 
-Given(/^an existing blog named "(.*?)" with a Markdown Section named "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
 
 Given(/^I visit the Manage Blogs home page$/) do
   pending # express the regexp above with the code you wish you had
@@ -58,41 +55,6 @@ Then(/^the name of the blog is stored$/) do
   pending # express the regexp above with the code you wish you had
 end
 
-When(/^add a Markdown Section to the blog$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^add a title "(.*?)" and text "(.*?)" to the Markdown Section$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^the Markdown Section with title "(.*?)" and text "(.*?)" is stored in the blog$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^add a Big Image Section to the blog$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^add a title named "(.*?)" and Image "(.*?)" to the Big Image Section$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^the Big Image Section with title "(.*?)" and image "(.*?)" is stored in the blog$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^add a Code Section to the blog$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^add a title named "(.*?)" and code "(.*?)" to the Section$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^the Code Section with title "(.*?)" and code "(.*?)" is stored in the blog$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
 
 Then(/^I can delete the blog$/) do
   pending # express the regexp above with the code you wish you had

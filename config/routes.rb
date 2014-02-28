@@ -1,6 +1,8 @@
 Rorhacker::Application.routes.draw do
 
   root to: 'blogs#index'
+  get "welcome/about"
+  match "about" => 'welcome#about', via: :get
 
   resources :users
   resources :blogs

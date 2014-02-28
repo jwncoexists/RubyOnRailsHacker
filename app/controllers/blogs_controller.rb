@@ -1,21 +1,25 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :xml, :json
 
   # GET /blogs
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    respond_with Blog.all
+
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @blog = Blog.find(params[:id])
+    respond_with @blog
   end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
-    @section = @blog.sections.build
   end
 
   # GET /blogs/1/edit
@@ -26,40 +30,37 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
-
-    respond_to do |format|
-      if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @blog }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
-      end
+    authorize! :create, @blog, message: "You don't have access to create this blog." 
+    
+    if @blog.save
+      flash[:notice] = "Blog was created successfully."
+      redirect_to @blog
+    else
+      flash[:error] = "Error creating blog. Please try again."
+      render :new
     end
+    # respond_with Blog.create(blog_params)
   end
 
   # PATCH/PUT /blogs/1
   # PATCH/PUT /blogs/1.json
   def update
-    respond_to do |format|
-      if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
-      end
-    end
+     @blog = Blog.find(params[:id])
+     authorize! :update, @blog, message: "You don't have access to update this blog."
+     
+     if @blog.update_attributes(blog_params)
+       redirect_to @blog, notice: "Blog has been updated."
+     else
+       flash[:error] = "Error saving blog.  Please try again."
+       render :edit
+     end
+    # respond_with Blog.update(params[:id], params[:blog])
   end
 
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy
-    @blog.destroy
-    respond_to do |format|
-      format.html { redirect_to blogs_url }
-      format.json { head :no_content }
-    end
+    respond_with Blog.destroy(params[:id])
   end
 
   private
@@ -70,7 +71,7 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:id, :title, :image, :intro, :user_id, :released, :created_at, :updated_at,
-            sections_attributes: [:id, :type, :title, :body, :image, :sequence, :created_at, :updated_at, :_destroy] )
+      params.require(:blog).permit(:id, :title, :image, :intro, :user_id, 
+                                   :body, :released, :created_at, :updated_at )
     end
 end

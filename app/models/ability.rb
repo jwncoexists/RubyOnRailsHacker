@@ -31,7 +31,6 @@ class Ability
     if user
       if user.account? :admin
         can :manage, Blog
-        can :manage, Section
         can :manage, User
       elsif user.account? :member
         can :view, Blog, released: true

@@ -1,11 +1,15 @@
-jQuery ->
-  $('form').on 'click', '.remove_fields', (event) ->
-      $(this).prev('input[type=hidden]').val('1')
-      $(this).closest('fieldset').hide()
-      event.preventDefault()
+app = angular.module("RoRHacker", ["ngResource"])
 
-  $('form').on 'click', '.add_fields', (event) ->
-    time = new Date().getTime()
-    regexp = new RegExp($(this).data('id'), 'g')
-    $(this).before($(this).data('fields').replace(regexp, time))
-    event.preventDefault()
+app.factory "Blog", ["$resource", ($resource) ->
+  $resource("/blogs/:id", {id: "@id"}, {update: {method: "PUT"}} )
+]
+
+@BlogCtrl = ["$scope", "Blog", ($scope, $Blog) ->
+  $scope.blogs = Blog.query()
+
+  $scope.addBlog = ->
+    blog = blog.save($scope.newBlog)
+    $scope.blogs.push(blog)
+    $scope.newBlog = {}
+
+]
