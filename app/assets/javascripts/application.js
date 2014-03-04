@@ -14,8 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require angular
-//= require angular-animate
-//= require angular-resource
 //= require_tree .
 //= require_tree ../../../vendor/assets/javascripts/.
+
+  $(window).load(function() {
+      $('#aboutSlogan').addClass('animated lightSpeedIn');
+  });

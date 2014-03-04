@@ -16,8 +16,9 @@
             <article class="post">
                 <h1><%= link_to blog.title, blog_path(blog), class: "transicion" %></h1>
                 <div class="row">
+
                     <div class="col-lg-6">
-                        <%= image_url( "4.jpg", class: "img-responsive", alt: "Image") %>
+                        <%= image_tag( "4.jpg", class: "img-responsive", alt: "Image") %>
                     </div>
                     <div class="col-lg-6">
                         <p><%= markdown blog.intro %></p>
@@ -76,17 +77,17 @@
                             <h3>Related Blogs</h3>
                             <ul class="post-sidebar">
                                 <li>
-                                    <%= image_url("t1.jpg", class: "img-responsive", alt: "Image") %>
+                                    <%= image_tag("t1.jpg", class: "img-responsive", alt: "Image") %>
                                     <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
                                     <span class="date">12 Apr 2012, 3 comments</span>
                                 </li>
                                 <li>
-                                    <%= image_url("t2.jpg", class: "img-responsive", alt: "Image") %>
+                                    <%= image_tag("t2.jpg", class: "img-responsive", alt: "Image") %>
                                     <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
                                     <span class="date">12 Apr 2012, 3 comments</span>
                                 </li>
                                 <li>
-                                    <%= image_url("t3.jpg", class: "img-responsive", alt: "Image") %>
+                                    <%= image_tag("t3.jpg", class: "img-responsive", alt: "Image") %>
                                     <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
                                     <span class="date">12 Apr 2012, 3 comments</span>
                                 </li>
@@ -158,27 +159,27 @@
                     <h2><i class="fa fa-comments"></i> Recent Comments</h2>
                     <ul class="comments-sidebar">
                         <li>
-                            <%= image_url("client.jpg", class: "img-responsive", alt: "Image") %>
+                            <%= image_tag("client.jpg", class: "img-responsive", alt: "Image") %>
                             <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
                             <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
                         </li>
                         <li>
-                            <%= image_url("client2.jpg", class: "img-responsive", alt: "Image") %>
+                            <%= image_tag("client2.jpg", class: "img-responsive", alt: "Image") %>
                             <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
                             <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
                         </li>
                         <li>
-                            <%= image_url("img/sample/client6.jpg", class: "img-responsive", alt: "Image") %>
+                            <%= image_tag("client6.jpg", class: "img-responsive", alt: "Image") %>
                             <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
                             <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
                         </li>
                         <li>
-                            <%= image_url("client4.jpg", class: "img-responsive", alt: "Image") %>
+                            <%= image_tag("client4.jpg", class: "img-responsive", alt: "Image") %>
                             <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
                             <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
                         </li>
                         <li>
-                            <%= image_url("client5.jpg", class: "img-responsive", alt: "Image") %>
+                            <%= image_tag("client5.jpg", class: "img-responsive", alt: "Image") %>
                             <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
                             <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
                         </li>

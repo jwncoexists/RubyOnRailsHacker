@@ -28,14 +28,20 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'cancan'
+# support environment variables
 gem 'figaro'
+# use markdown and syntax highlighting
 gem 'redcarpet', '~> 2.1.1'
 gem 'coderay', '~> 1.0.7'
+# uploading images
+gem 'carrierwave'
+gem 'mini_magick'
+# threaded comments
+gem 'acts_as_commentable_with_threading'
 
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'angularjs-rails'
 
 group :development, :test do
   gem 'rspec-rails'

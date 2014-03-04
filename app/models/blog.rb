@@ -1,6 +1,4 @@
 class Blog < ActiveRecord::Base
-
-  private
-
+  acts_as_commentable
 end
 

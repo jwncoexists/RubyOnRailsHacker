@@ -1,11 +1,13 @@
 Rorhacker::Application.routes.draw do
 
+  get "contact/new"
   root to: 'blogs#index'
   get "welcome/about"
   match "about" => 'welcome#about', via: :get
 
   resources :users
   resources :blogs
+  resources :contact, only: [:new, :create]
 
   resources :email_confirmations
   controller :sessions do
