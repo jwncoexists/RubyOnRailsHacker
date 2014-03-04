@@ -16,7 +16,18 @@
 //= require bootstrap
 //= require_tree .
 //= require_tree ../../../vendor/assets/javascripts/.
-
-  $(window).load(function() {
-      $('#aboutSlogan').addClass('animated lightSpeedIn');
+$(window).load(function() {
+    $('#aboutSlogan').addClass('animated lightSpeedIn');
+});
+$(document).ready(function() {
+  $(".js-show-hide").click(function() {
+    var selector = "." + $(this).attr('data-selector');
+    if ($(selector).is(":visible")) {
+      $(selector).slideUp();
+    }
+    else {
+      $(selector).slideDown();
+    }
+    return false;
   });
+});

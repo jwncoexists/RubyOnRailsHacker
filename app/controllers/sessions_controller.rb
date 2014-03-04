@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         else
           cookies[:token] = user.token
         end
-        redirect_to blogs_path, notice: "You are now logged in to Ruby on Rails Hacker."
+        redirect_to blogs_path, notice: "You are now logged in to Jennifer Nelson's blog site."
       else
         flash[:alert] =  "Invalid user/password combination."
         render :new

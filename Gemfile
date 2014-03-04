@@ -37,7 +37,6 @@ gem 'coderay', '~> 1.0.7'
 gem 'carrierwave'
 gem 'mini_magick'
 # threaded comments
-gem 'acts_as_commentable_with_threading'
 
 
 # Use ActiveModel has_secure_password

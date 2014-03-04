@@ -26,16 +26,10 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    acts_as_commentable_with_threading (1.2.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
-      awesome_nested_set (>= 2.0)
     arel (4.0.2)
     atomic (1.1.14)
     autotest-rails (4.2.1)
       ZenTest (~> 4.5)
-    awesome_nested_set (2.1.6)
-      activerecord (>= 3.0.0)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (3.0.2.1)
       sass (~> 3.2)
@@ -183,7 +177,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_commentable_with_threading
   autotest-rails
   bcrypt-ruby (~> 3.0.0)
   bootstrap-sass

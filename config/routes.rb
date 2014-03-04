@@ -6,7 +6,9 @@ Rorhacker::Application.routes.draw do
   match "about" => 'welcome#about', via: :get
 
   resources :users
-  resources :blogs
+  resources :blogs do
+    resources :comments, only: [:create, :destroy]
+  end
   resources :contact, only: [:new, :create]
 
   resources :email_confirmations

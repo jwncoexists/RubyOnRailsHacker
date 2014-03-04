@@ -31,6 +31,19 @@ module ApplicationHelper
     link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
+  def control_group_tag(errors, &block)
+    if errors.any?
+      content_tag :div, capture(&block), class: 'control-group error'
+    else
+      content_tag :div, capture(&block), class: 'control-group'
+    end
+  end
+
+  def comment_url_helper(comment)
+    blog = comment.blog
+    [blog, comment]
+  end
+
 end
 
 

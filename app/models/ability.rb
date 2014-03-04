@@ -30,15 +30,16 @@ class Ability
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
     if user
       if user.account? :admin
-        can :manage, Blog
-        can :manage, User
+        can :manage, :all
       elsif user.account? :member
         can :view, Blog, released: true
+        can :manage, Comment, :user_id => user.id
       end
       
     # users who are not logged in can view courses  
     else
       can :view, Blog, released: true
+      can :view, Comment
     end
   end
 end

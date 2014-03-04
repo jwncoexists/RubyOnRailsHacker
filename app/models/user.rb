@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   before_create { generate_token(:token) }
   has_many :blogs
+  has_many :comments
 
   ACCOUNTS = %w[member admin]
   def account?(base_account)

@@ -1,5 +1,5 @@
 class RegistrationMailer < ActionMailer::Base
-  default from: "rubyonrailshacker@gmail.com"
+  default from: "jenniferwnelson@sbcglobal.net"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -9,6 +9,6 @@ class RegistrationMailer < ActionMailer::Base
   def registration_confirmation(user, url)
     @url = url
     @user = user
-    mail to: user.email, subject: "Ruby On Rails Hacker Registration Confirmation"
+    mail to: user.email, subject: "Registration Confirmation for Jennifer Nelson's Blog"
   end
 end

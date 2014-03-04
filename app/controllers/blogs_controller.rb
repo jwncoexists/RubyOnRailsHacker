@@ -1,20 +1,18 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :xml, :json
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all.order(created_at: :desc)
-    respond_with Blog.all
-
+    @blogs = Blog.all.order(updated_at: :desc)
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
     @blog = Blog.find(params[:id])
-    respond_with @blog
+    @comments = @blog.comments
+    @comment = Comment.new
   end
 
   # GET /blogs/new
