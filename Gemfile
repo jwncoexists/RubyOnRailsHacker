@@ -36,7 +36,12 @@ gem 'coderay', '~> 1.0.7'
 # uploading images
 gem 'carrierwave'
 gem 'mini_magick'
-# threaded comments
+# for Amazon S3 cloud storage
+gem 'fog'
+# for searching with elasticsearch
+gem "elasticsearch", git: "git://github.com/elasticsearch/elasticsearch-ruby.git"
+gem "elasticsearch-model", git: "git://github.com/elasticsearch/elasticsearch-rails.git"
+gem "elasticsearch-rails", git: "git://github.com/elasticsearch/elasticsearch-rails.git"
 
 
 # Use ActiveModel has_secure_password
@@ -49,6 +54,7 @@ group :development, :test do
   gem 'railroady'
   gem "minitest-rails"
   gem "autotest-rails"
+  gem 'faker'
 end
 
 group :doc do
@@ -59,7 +65,6 @@ end
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  gem 'faker'
 end
 
 # Use ActiveModel has_secure_password

@@ -1,7 +1,7 @@
 <%= content_tag :div, class: 'media', id: "comment-#{comment.id}" do %>
   <div class="media-body">
     <small>
-      <b><em><%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago</b></em> 
+      <b><em><%= image_tag(comment.user.avatar.tiny.url) if comment.user.avatar? %><%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago</b></em> 
       <% if can? :destroy, comment %>
         | <%= link_to "Delete", comment_url_helper(comment), method: :delete, remote: true %>
       <% end %>

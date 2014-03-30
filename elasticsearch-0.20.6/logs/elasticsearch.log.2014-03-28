@@ -1,0 +1,13 @@
+[2014-03-28 19:01:14,617][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2014-03-28 19:01:14,632][INFO ][node                     ] [Plazm] {0.20.6}[5249]: initializing ...
+[2014-03-28 19:01:14,644][INFO ][plugins                  ] [Plazm] loaded [], sites []
+[2014-03-28 19:01:18,237][INFO ][node                     ] [Plazm] {0.20.6}[5249]: initialized
+[2014-03-28 19:01:18,237][INFO ][node                     ] [Plazm] {0.20.6}[5249]: starting ...
+[2014-03-28 19:01:19,355][INFO ][transport                ] [Plazm] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.0.2.15:9300]}
+[2014-03-28 19:01:22,440][INFO ][cluster.service          ] [Plazm] new_master [Plazm][fKARli1bRJmH-8GAfldWgQ][inet[/10.0.2.15:9300]], reason: zen-disco-join (elected_as_master)
+[2014-03-28 19:01:22,488][INFO ][discovery                ] [Plazm] elasticsearch/fKARli1bRJmH-8GAfldWgQ
+[2014-03-28 19:01:22,513][INFO ][http                     ] [Plazm] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.0.2.15:9200]}
+[2014-03-28 19:01:22,515][INFO ][node                     ] [Plazm] {0.20.6}[5249]: started
+[2014-03-28 19:01:22,658][INFO ][gateway                  ] [Plazm] recovered [0] indices into cluster_state
+[2014-03-28 19:05:22,678][INFO ][cluster.metadata         ] [Plazm] [articles] creating index, cause [api], shards [5]/[1], mappings [article]
+[2014-03-28 19:05:23,752][INFO ][cluster.metadata         ] [Plazm] [articles] update_mapping [article] (dynamic)

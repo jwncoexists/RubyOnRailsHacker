@@ -1,7 +1,21 @@
 <div>
     <header class="page-title">
         <div class="container">
-            <h1>Blogs</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Blogs</h1>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="block">
+                        <div class="input-group">
+                          <%= form_tag search_blogs_path, method: 'get' do %>
+                            <%= text_field_tag :q, params[:q] %>
+                            <%= submit_tag :search, class: "btn btn-primary" %>
+                          <% end %>
+                        </div><!-- /input-group -->
+                    </div>
+                </div> 
+            </div>
             <% if can? :manage, Blog %>
               <ol class="breadcrumb">
                   <li><%= link_to 'New', new_blog_path %></li>
@@ -16,7 +30,6 @@
             <article class="post">
                 <h1><%= link_to blog.title, blog_path(blog), class: "transicion" %></h1>
                 <div class="row">
-
                     <div class="col-lg-6">
                         <%= image_tag( "4.jpg", class: "img-responsive", alt: "Image") %>
                     </div>
@@ -54,140 +67,6 @@
               </ul>
           </section>
         </div> <!-- col-md-8 -->
-        <div class="col-md-4">
-            <aside class="sidebar">
-                <div class="block">
-                    <div class="input-group">
-                      <input type="text" placeholder="Search..." class="form-control">
-                      <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
-                      </span>
-                    </div><!-- /input-group -->
-                </div>
-
-                <div class="block">
-                    <ul class="nav nav-tabs nav-tabs-robotic nav-tabs-simple-2" id="myTab2">
-                        <li class="active"><a href="#fav" data-toggle="tab"><i class="fa fa-star"></i></a></li>
-                        <li><a href="#categories" data-toggle="tab"><i class="fa fa-folder-open"></i></a></li>
-                        <li><a href="#archive" data-toggle="tab"><i class="fa fa-clock-o"></i></a></li>
-                        <li><a href="#tags" data-toggle="tab"><i class="fa fa-tags"></i></a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="fav">
-                            <h3>Related Blogs</h3>
-                            <ul class="post-sidebar">
-                                <li>
-                                    <%= image_tag("t1.jpg", class: "img-responsive", alt: "Image") %>
-                                    <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
-                                    <span class="date">12 Apr 2012, 3 comments</span>
-                                </li>
-                                <li>
-                                    <%= image_tag("t2.jpg", class: "img-responsive", alt: "Image") %>
-                                    <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
-                                    <span class="date">12 Apr 2012, 3 comments</span>
-                                </li>
-                                <li>
-                                    <%= image_tag("t3.jpg", class: "img-responsive", alt: "Image") %>
-                                    <h4><a href="#">Lorem ipsum Labore officia dolor adipisicing</a> </h4>
-                                    <span class="date">12 Apr 2012, 3 comments</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane" id="categories">
-                            <h3>Categories</h3>
-                            <ul class="simple">
-                                <li><a href="#">Game Programming</a></li>
-                                <li><a href="#">Artificial Intelligence</a>
-                                    <ul>
-                                        <li><a href="#">Artificial Life</a></li>
-                                        <li><a href="#">Neural Networks</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Resources</a></li>
-                                <li><a href="#">Web Developer</a></li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane" id="archive">
-                            <h3>Archives</h3>
-                            <ul class="simple">
-                                <li><a href="#">December 2012</a></li>
-                                <li><a href="#">January 2013</a></li>
-                                <li><a href="#">February 2013</a></li>
-                                <li><a href="#">March 2013</a></li>
-                                <li><a href="#">April 2013</a></li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane" id="tags">
-                            <h3>Tags</h3>
-                            <div class="tags-cloud">
-                                <a href="#" class="tag">Web</a>
-                                <a href="#" class="tag">Artificial Intelligence</a>
-                                <a href="#" class="tag">Programing</a>
-                                <a href="#" class="tag">Design</a>
-                                <a href="#" class="tag">3D</a>
-                                <a href="#" class="tag">Games</a>
-                                <a href="#" class="tag">Resources</a>
-                                <a href="#" class="tag">2D</a>
-                                <a href="#" class="tag">C++</a>
-                                <a href="#" class="tag">Jquery</a>
-                                <a href="#" class="tag">Javascript</a>
-                                <a href="#" class="tag">Library</a>
-                                <a href="#" class="tag">Windows</a>
-                                <a href="#" class="tag">Linux</a>
-                                <a href="#" class="tag">Cloud</a>
-                                <a href="#" class="tag">Game developer</a>
-                                <a href="#" class="tag">Server</a>
-                                <a href="#" class="tag">Google</a>
-                                <a href="#" class="tag">Bootstrap</a>
-                                <a href="#" class="tag">Less</a>
-                                <a href="#" class="tag">Sass</a>
-                                <a href="#" class="tag">Engine</a>
-                                <a href="#" class="tag">Node.js</a>
-                            </div>
-                        </div>
-                    </div> <!-- tab-content -->
-                </div>
-
-                <div class="block">
-                    <h2><i class="fa fa-play-circle"></i>Featured video</h2>
-                    <div class="video">
-                        <iframe src="http://player.vimeo.com/video/18554749"></iframe>
-                    </div>
-                </div>
-
-                <div class="block">
-                    <h2><i class="fa fa-comments"></i> Recent Comments</h2>
-                    <ul class="comments-sidebar">
-                        <li>
-                            <%= image_tag("client.jpg", class: "img-responsive", alt: "Image") %>
-                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
-                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
-                        </li>
-                        <li>
-                            <%= image_tag("client2.jpg", class: "img-responsive", alt: "Image") %>
-                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
-                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
-                        </li>
-                        <li>
-                            <%= image_tag("client6.jpg", class: "img-responsive", alt: "Image") %>
-                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
-                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
-                        </li>
-                        <li>
-                            <%= image_tag("client4.jpg", class: "img-responsive", alt: "Image") %>
-                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
-                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
-                        </li>
-                        <li>
-                            <%= image_tag("client5.jpg", class: "img-responsive", alt: "Image") %>
-                            <h4><a href="#">Andrew</a> in <a href="#">Lorem ipsum Fugiat elit occaecat aute nisi</a></h4>
-                            <p>Lorem ipsum Occaecat ut esse amet ut eiusmod laborum cillum voluptate do laboris dolor ut elit aliquip velit ut nulla anim ...</p>
-                        </li>
-                    </ul>
-                </div>
-
-            </aside> <!-- Sidebar -->
-        </div> 
     </div> <!-- container -->
 </div>
 

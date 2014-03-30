@@ -41,7 +41,6 @@
             <% if can? :create, Comment %>
                 <section class="comment-form">
                     <div class="js-new-comment">
-                        <h4>New Comment</h4>
                         <%= render partial: 'comments/form', locals: { blog: @blog, comment: @comment } %>
                     </div>
                 </section>

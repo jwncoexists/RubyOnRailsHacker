@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   before_create { generate_token(:token) }
   has_many :blogs
   has_many :comments
+  mount_uploader :avatar, AvatarUploader 
 
   ACCOUNTS = %w[member admin]
   def account?(base_account)
@@ -17,7 +18,7 @@ class User < ActiveRecord::Base
       self[column] = SecureRandom.hex(6)
     end while User.exists?(column => self[column])
   end
-  
+
   private
 
     def already_has_password?

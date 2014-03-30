@@ -55,8 +55,8 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
      # @user = User.find(params[:id])
      # merge default value with params so if no collaborators checked, will erase
-     if @user.update_attributes(user_params_nopw)
-       redirect_to @user
+     if @user.update_attributes(user_params)
+       redirect_to blogs_path
      else
        flash[:error] = "Error saving user.  Please try again. #{@user.errors.full_messages.first}."
        render :edit
@@ -86,6 +86,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :token, :account, :confirmed_at, :password, :password_confirmation, :name)
+      params.require(:user).permit(:email, :token, :account, :confirmed_at, :password, :password_confirmation, :name, :avatar)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304193823) do
+ActiveRecord::Schema.define(version: 20140329000432) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(version: 20140304193823) do
     t.boolean  "released",   default: false
     t.text     "body"
   end
+
+  add_index "blogs", ["body"], name: "index_blogs_on_body", using: :btree
+  add_index "blogs", ["released"], name: "index_blogs_on_released", using: :btree
+  add_index "blogs", ["title"], name: "index_blogs_on_title", using: :btree
+  add_index "blogs", ["user_id"], name: "index_blogs_on_user_id", using: :btree
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -44,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140304193823) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
   add_index "users", ["confirmed_at"], name: "index_users_on_confirmed_at", using: :btree

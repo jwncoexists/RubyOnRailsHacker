@@ -4,7 +4,23 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all.order(updated_at: :desc)
+    #if params[:query].present?
+      #@blogs = Blog.search(params[:query, load: true]).records
+    #else
+      @blogs = Blog.all.order(updated_at: :desc)
+    #end
+    # blogs = Blog.all.order(updated_at: :desc)
+  end
+
+# GET /blogs/search
+  def search
+    if params[:q].present?
+      @blogs = Blog.search(params[:q]).records.order(updated_at: :desc)
+    else
+      @blogs = Blog.all.order(updated_at: :desc)
+    end
+
+    render action: "index"
   end
 
   # GET /blogs/1
@@ -27,14 +43,21 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
+    if (!current_user)
+      flash[:notice] = "No current user is active"
+      redirect_to blogs_path
+    end
     @blog = Blog.new(blog_params)
+    # @blog = current_user.blogs.build(blog_params)
+    @blog.user_id = current_user.id
     authorize! :create, @blog, message: "You don't have access to create this blog." 
     
     if @blog.save
       flash[:notice] = "Blog was created successfully."
       redirect_to @blog
     else
-      flash[:error] = "Error creating blog. Please try again."
+
+      flash[:error] = "Error creating blog. Please try again. #{@blog.errors.full_messages.first}"
       render :new
     end
     # respond_with Blog.create(blog_params)
