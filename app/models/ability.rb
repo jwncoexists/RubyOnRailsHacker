@@ -31,12 +31,13 @@ class Ability
     if user
       if user.account? :admin
         can :manage, :all
+        can :view_unreleased, Blog
       elsif user.account? :member
         can :view, Blog, released: true
         can :manage, Comment, :user_id => user.id
       end
       
-    # users who are not logged in can view courses  
+    # users who are not logged in can view blogsf  
     else
       can :view, Blog, released: true
       can :view, Comment

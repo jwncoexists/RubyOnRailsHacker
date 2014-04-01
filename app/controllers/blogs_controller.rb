@@ -4,12 +4,13 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    #if params[:query].present?
-      #@blogs = Blog.search(params[:query, load: true]).records
-    #else
+
+    if( current_user && current_user.account == 'admin' )
       @blogs = Blog.all.order(updated_at: :desc)
-    #end
-    # blogs = Blog.all.order(updated_at: :desc)
+    else
+      @blogs = Blog.all.where(released: true).order(updated_at: :desc)
+    end
+
   end
 
 # GET /blogs/search
@@ -19,6 +20,8 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.all.order(updated_at: :desc)
     end
+
+    filter :term, released: true unless (current_user && current_user.account == 'admin')
 
     render action: "index"
   end
