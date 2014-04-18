@@ -6,9 +6,9 @@ class BlogsController < ApplicationController
   def index
 
     if( current_user && current_user.account == 'admin' )
-      @blogs = Blog.all.order(updated_at: :desc)
+      @blogs = Blog.all.paginate(page: params[:page], per_page: 3)
     else
-      @blogs = Blog.all.where(released: true).order(updated_at: :desc)
+      @blogs = Blog.all.where(released: true).paginate(page: params[:page], per_page: 3)
     end
 
   end
@@ -16,9 +16,9 @@ class BlogsController < ApplicationController
 # GET /blogs/search
   def search
     if params[:q].present?
-      @blogs = Blog.search(params[:q]).records.order(updated_at: :desc)
+      @blogs = Blog.search(params[:q]).records.order(updated_at: :desc).paginate(page: params[:page], per_page: 10)
     else
-      @blogs = Blog.all.order(updated_at: :desc)
+      @blogs = Blog.all.order(updated_at: :desc).paginate(page: params[:page], per_page: 10)
     end
 
     filter :term, released: true unless (current_user && current_user.account == 'admin')

@@ -43,6 +43,7 @@ gem "elasticsearch", git: "git://github.com/elasticsearch/elasticsearch-ruby.git
 gem "elasticsearch-model", git: "git://github.com/elasticsearch/elasticsearch-rails.git"
 gem "elasticsearch-rails", git: "git://github.com/elasticsearch/elasticsearch-rails.git"
 
+gem 'will_paginate', '~> 3.0'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
