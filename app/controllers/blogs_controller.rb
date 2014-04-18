@@ -6,9 +6,9 @@ class BlogsController < ApplicationController
   def index
 
     if( current_user && current_user.account == 'admin' )
-      @blogs = Blog.all.paginate(page: params[:page], per_page: 3)
+      @blogs = Blog.all.paginate(page: params[:page])
     else
-      @blogs = Blog.all.where(released: true).paginate(page: params[:page], per_page: 3)
+      @blogs = Blog.all.where(released: true).paginate(page: params[:page])
     end
 
   end

@@ -9,7 +9,9 @@ class Blog < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
-  mount_uploader :image, ImageUploader # add this line.
+  mount_uploader :image, ImageUploader
+
+  self.per_page = 10
   
 end
 
