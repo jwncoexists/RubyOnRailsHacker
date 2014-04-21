@@ -35,5 +35,5 @@ Rorhacker::Application.configure do
     :user_name      => ENV['EMAIL_USERNAME'],
     :password       => ENV['EMAIL_PASSWORD'],
     :domain         => ENV['EMAIL_DOMAIN'],
-    :enable_starttls_auto => true   }
+     }
 end
