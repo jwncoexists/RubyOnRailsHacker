@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  # before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
@@ -41,6 +41,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
+    @blog = Blog.find(params[:id])
   end
 
   # POST /blogs
@@ -93,7 +94,7 @@ class BlogsController < ApplicationController
       @blog = Blog.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # only allow the white list through.
     def blog_params
       params.require(:blog).permit(:id, :title, :image, :intro, :user_id, 
                                    :body, :released, :created_at, :updated_at )

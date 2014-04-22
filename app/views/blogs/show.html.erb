@@ -36,7 +36,7 @@
                 </div>
                 
                 <% if @blog.image.file %>
-                  <%= image_tag(@blog.image.file, class: "img-responsive") %>
+                  <%= image_tag(@blog.image.url, class: "img-responsive") %>
                 <% end %>
 
                 <% if @blog.intro %>
