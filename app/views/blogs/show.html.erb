@@ -68,11 +68,11 @@
             <% end %>
 
             <section class="comments">
-                <% if @comments.count > 0 %>
-                    <div class="js-comments">
+                <div class="js-comments">
+                    <% if @comments.count > 0 %>
                         <%= render partial: 'comments/comment', collection: @comments, locals: { blog: @blog } %>   
-                    </div> 
-                <% end %>             
+                    <% end %>
+                </div>              
             </section> <!-- comments -->
 
 

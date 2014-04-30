@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329000432) do
+ActiveRecord::Schema.define(version: 20140427230916) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 20140329000432) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",           null: false
+    t.string   "email",                              null: false
     t.string   "token"
     t.datetime "confirmed_at"
-    t.string   "password_digest", null: false
-    t.string   "account"
+    t.string   "password_digest",                    null: false
+    t.string   "account",         default: "member"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

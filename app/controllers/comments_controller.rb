@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
 
     @comment = current_user.comments.build(comment_params)
     @comment.blog = @blog
-    @new_comment = Comment.new
+    # @new_comment = Comment.new
     
     authorize! :create, @comment, message: "You need be signed in to do that."
 

@@ -34,7 +34,7 @@ class Ability
         can :view_unreleased, Blog
       elsif user.account? :member
         can :view, Blog, released: true
-        can :manage, Comment, :user_id => user.id
+        can :manage, Comment
       end
       
     # users who are not logged in can view blogsf  
