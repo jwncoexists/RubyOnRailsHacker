@@ -1,6 +1,7 @@
 
 module ApplicationHelper
 
+  # this scans for 3 tick marks and then the language
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
       CodeRay.scan(code, language).div
