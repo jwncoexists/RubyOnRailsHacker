@@ -41,7 +41,7 @@
 
                         <div class="single-info">
                             <span class="date"><i class="fa fa-clock-o"></i> <%= @blog.created_at %></span> | <span class="author"><i class="fa fa-user"></i> Jennifer Nelson</span>
-                            <span class="num-comments"> | <i class="fa fa-comments"></i><%= pluralize(@comments.count, 'Comments') %></span>
+                            <span class="num-comments"> | <i class="fa fa-comments"></i><%= " #{pluralize(@comments.count, 'Comments')}" %></span>
                         </div>
                     </div>
                 </div>
