@@ -13,6 +13,7 @@ Rorhacker::Application.routes.draw do
   end
   resources :contact, only: [:new, :create]
 
+
   resources :email_confirmations
   controller :sessions do
     get 'login' => :new
@@ -22,6 +23,8 @@ Rorhacker::Application.routes.draw do
 
   get "sessions/create"
   get "sessions/destroy"
+  get "pmp/about"
+  match "pmp" => 'pmp#about', via: :get
 
 
 
