@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if (!can? :view_account, @user)
       redirect_to root_path, notice: "You don't have access to view that information. Please select from menu options above."
-    end  
+    end
   end
 
   # GET /users/new
@@ -36,14 +36,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      RegistrationMailer.registration_confirmation(@user, 
+      RegistrationMailer.registration_confirmation(@user,
         new_email_confirmation_url(token: @user.token)).deliver
       redirect_to login_path, notice: "A confirmation email has been sent!! Click link in the email to verify address, then log in below."
     else
       if @user.errors.any?
         flash[:error] = "Error creating new user. Please try again. #{@user.errors.full_messages.first}."
       else
-        flash[:error] = "Error creating new user. Please try again." 
+        flash[:error] = "Error creating new user. Please try again."
       end
       render :new
     end

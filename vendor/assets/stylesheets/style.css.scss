@@ -75,7 +75,7 @@ iframe {
     margin-bottom: 40px
 }
 
-@media (max-width: 1199px) { 
+@media (max-width: 1199px) {
     .boxed {
         border: 0
     }
@@ -657,7 +657,7 @@ figure.caption h5 {
     color: #fff;
 }
 
-@media (max-width: 763px) { 
+@media (max-width: 763px) {
     figure.caption {
     }
 }
@@ -839,13 +839,13 @@ figure.caption-right:hover img {
     color: #fff;
 }
 
-@media (min-width: 768px) and (max-width: 991px) { 
+@media (min-width: 768px) and (max-width: 991px) {
     .navbar-lime ul.navbar-nav > li > a {
         min-width: 0
     }
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .navbar-lime .navbar-right .dropdown-menu {
         right: auto;
         left: 0;
@@ -890,7 +890,7 @@ figure.caption-right:hover img {
 
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     #carousel-home {
         max-width: 960px;
         margin: 0 auto;
@@ -965,7 +965,7 @@ figure.caption-right:hover img {
     color: #fff;
 }
 
-@media (min-width: 768px) and (max-width: 991px) { 
+@media (min-width: 768px) and (max-width: 991px) {
     .home-features-item {
         height: 250px
     }
@@ -992,7 +992,7 @@ figure.caption-right:hover img {
     }
 }
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
     .home-features-item .item-content {
         font-size: .98em;
         line-height: 1.6em;
@@ -1003,7 +1003,7 @@ figure.caption-right:hover img {
     }
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .home-features-item {
         width: 90%
     }
@@ -1166,7 +1166,7 @@ figure.caption-right:hover img {
     -webkit-transform: rotateY(0deg); /* Safari and Chrome */
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     #workflow:before {
         border-top: 50px solid #009c82;
         content: "";
@@ -1207,7 +1207,7 @@ figure.caption-right:hover img {
     }
 }
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
     .workflow-item {
         width: 180px;
         height: 180px;
@@ -1230,7 +1230,7 @@ figure.caption-right:hover img {
     }
 }
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .workflow-item {
         width: 200px;
         height: 200px;
@@ -1334,7 +1334,7 @@ figure.caption-right:hover img {
     color: #fff;
 }
 
-@media (min-width: 600px) { 
+@media (min-width: 600px) {
 
 .clients-item:hover .clients-caption,
 .clients-item.cs-hover .clients-caption {
@@ -1465,6 +1465,10 @@ figure.caption-right:hover img {
 
 .footer-social > a.i-twitter {
     background-color: #00acee
+}
+
+.footer-social > a.i-codepen {
+  background-color: #1D9C72
 }
 
 .footer-social > a.i-facebook {
@@ -1857,7 +1861,7 @@ figure.caption-right:hover img {
 
 #about-info > .about-item h3 {
     margin: 0;
-    padding: 0 0 10px 0; 
+    padding: 0 0 10px 0;
 }
 
 #about-info > .about-item p {
@@ -1874,7 +1878,7 @@ figure.caption-right:hover img {
 .about-team-item:hover .about-team-item-social {
     visibility: visible;
     opacity: 1;
-    
+
 }
 
 .about-team-item img {
@@ -2290,7 +2294,7 @@ figure.caption-right:hover img {
     margin: auto;
     height: 370px;
     max-width: 600px;
-    
+
 }
 
 #login-form h1 {
@@ -2521,7 +2525,7 @@ figure.caption-right:hover img {
 /* Color Switcher */
 /* --------------------------------------------------------- */
 
-@media (max-width: 991px) { 
+@media (max-width: 991px) {
     #color-switcher {
         visibility: hidden
     }
