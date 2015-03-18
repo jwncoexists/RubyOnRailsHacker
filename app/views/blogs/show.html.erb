@@ -41,11 +41,11 @@
 
                         <div class="single-info">
                             <span class="date"><i class="fa fa-clock-o"></i> <%= @blog.created_at %></span> | <span class="author"><i class="fa fa-user"></i> Jennifer Nelson</span>
-                            <span class="num-comments"> | <i class="fa fa-comments"></i><%= " #{pluralize(@comments.count, 'Comments')}" %></span>
+                            <!-- <span class="num-comments"> | <i class="fa fa-comments"></i><%= " #{pluralize(@comments.count, 'Comments')}" %></span> -->
                         </div>
                     </div>
                 </div>
-                    
+
 
 
                 <% if @blog.intro %>
@@ -57,7 +57,7 @@
                 <% end %>
 
             </section> <!-- single -->
-            <h2 class="section-title js-comments-count"><%= @comments.count %> Comments</h2>
+            <!-- <h2 class="section-title js-comments-count"><%= @comments.count %> Comments</h2>
 
             <% if can? :create, Comment %>
                 <section class="comment-form">
@@ -70,13 +70,12 @@
             <section class="comments">
                 <div class="js-comments">
                     <% if @comments.count > 0 %>
-                        <%= render partial: 'comments/comment', collection: @comments, locals: { blog: @blog } %>   
+                        <%= render partial: 'comments/comment', collection: @comments, locals: { blog: @blog } %>
                     <% end %>
-                </div>              
-            </section> <!-- comments -->
+                </div>
+            </section> <!-- comments --> 
 
         </div> <!-- col-md-8 -->
 
     </div> <!-- row -->
 </div> <!-- container -->
-

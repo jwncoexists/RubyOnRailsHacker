@@ -1,5 +1,6 @@
 Rorhacker::Application.routes.draw do
 
+
   #root to: 'blogs#index'
   get "contact/new"
   get "welcome/about"
