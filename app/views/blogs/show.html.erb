@@ -46,8 +46,6 @@
                     </div>
                 </div>
 
-
-
                 <% if @blog.intro %>
                   <p><%= markdown @blog.intro %></p>
                 <% end %>
@@ -73,7 +71,7 @@
                         <%= render partial: 'comments/comment', collection: @comments, locals: { blog: @blog } %>
                     <% end %>
                 </div>
-            </section> <!-- comments --> 
+            </section> <!-- comments -->
 
         </div> <!-- col-md-8 -->
 

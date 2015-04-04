@@ -1,165 +1,361 @@
-
-<!-- Home Carousel -->
-
-<section id="home-carousel" class="home-section">
-    <div class="wrap-pattern">
-        <div class="container">
-            <div id="carousel-home" class="carousel slide" data-ride="carousel"  data-interval="3000">
-                <!-- Indicators -->
-
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="slogan home-section">
-                                    <p></p>
-                                    <p id="aboutSlogan" class="lead">Turning Ideas into Web Applications!</p>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- carousel-inner -->
-            </div> <!-- carousel-home -->
-        </div> <!-- container -->
-    </div> <!-- wrap-pattern -->
-</section> <!--  home-carousel -->
-
-
-
-<!-- home-slogan -->
-<section class="slogan home-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p class="lead"><span>Using </span>AngularJS <span>Javascript </span>JQuery <span>MongoDB </span>Node <span>Material Design  </span>Ruby on Rails <span>Resque </span>TDD <span>Karma </span>Cucumber <span>RSpec </span>HTML <span>CSS</span>.</p>
-            </div>
+<!-- Intro section start -->
+<section id="intro" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hello wow bounceInDown">
+          <h1>Hello, I'm Jennifer Nelson</h1>
+          <h3><span class="rotate">Front End Developer. | AngularJS Specialist. | Javascript Programmer. | RoR Creator.</span></h3>
         </div>
-    </div> <!-- container -->
-</section> <!-- home-slogan -->
+      </div>
+    </div><!-- .row -->
+  </div><!-- .container -->
+</section>
+<!-- Intro section end -->
 
+<!-- Profile contact callout section -->
+<section id="profile-contact">
+  <div class="container">
+    <div class="row">
 
-<!-- Home-about -->
-<section id="home-about" class="home-section">
-    <div class="container">
+      <div class="col-sm-3 wow bounceInUp">
+        <div class="profile-item">
+          <i class="fa fa-codepen"></i>
+          <h5><a href="http://codepen.io/jwncoexists/">Playground</h5>
+        </div>
+      </div>
+
+      <div class="col-sm-3 wow bounceInUp">
+        <div class="profile-item">
+          <i class="fa fa-github"></i>
+          <h5><a href="https://github.com/jwncoexists">Github Code</h5>
+        </div>
+      </div>
+
+      <div class="col-sm-3 wow bounceInUp">
+        <div class="profile-item">
+          <i class="fa fa-file-pdf-o"></i>
+          <h5><a href="#">Resume</h5>
+        </div>
+      </div>
+
+      <div class="col-sm-3 wow bounceInLeft">
+        <div class="profile-item">
+          <i class="fa fa-envelope-o"></i>
+          <h5><a href="#">jwncoexists@gmail.com</a></h5>
+        </div>
+      </div>
+
+    </div><!-- .row -->
+  </div><!-- .container -->
+</section>
+<!-- Profile contact callout section -->
+
+<!-- Profile section start -->
+<section id="profile" class="section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 headline wow bounceInDown">
+        <h2>Jennifer Nelson</h2>
+        <p>Front End Developer. AngularJS Specialist. Javascript Programmer.</p>
+      </div>
+
+      <div class="col-md-3 col-sm-6 hidden-xs wow bounceInLeft">
+        <!-- <img class="avatar" src="assets/images/photonl.jpg" alt=""> -->
+        <%= image_tag("laptop.jpg", class: "avatar", alt: "Jennifer Nelson") %>
+      </div>
+
+      <div class="col-md-3 col-sm-6 wow bounceInUp">
+
+        <div class="profile-widget">
+          <h3>Skillset</h3>
+
+          <h5>AngularJS</h5>
+          <div class="skill-bar">
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-off"></div>
+          </div>
+
+          <h5>HTML / CSS3 / SASS</h5>
+          <div class="skill-bar">
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-off"></div>
+          </div>
+
+          <h5>Javascript</h5>
+          <div class="skill-bar">
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-off"></div>
+          </div>
+
+          <h5>Ruby on Rails</h5>
+          <div class="skill-bar">
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-on"></div>
+            <div class="skill-rate-off"></div>
+          </div>
+        </div>
+
+        <div class="profile-widget">
+          <h3>Social Profiles</h3>
+          <ul class="widget-social">
+            <li><a href="http://www.linkedin.com/pub/jennifer-wallick-nelson-pmp/8/840/658/"><i class="fa fa-linkedin-square"></i></a></li>
+            <li><a href="http://github.com/jwncoexists"><i class="fa fa-github-alt"></i></a></li>
+            <li><a href="http://codepen.io/jwncoexists/"><i class="fa fa-codepen"></i></a></li>
+            <li><a href="http://twitter.com/intent/tweet?screen_name=jwncoexists"><i class="fa fa-twitter-square"></i></a></li>
+          </ul>
+        </div>
+
+      </div><!-- .col-md-3 -->
+
+      <div class="col-md-6 col-sm-12 wow bounceInRight">
+        <h3>Profesional Profile</h3>
+        <p>Jennifer Nelson is a freelance web developer living in San Diego, California. She has experience with a variety of frameworks and languages, and has worked for startups as well as large corporations.</p>
+        <p>Jennifer believes in behavior-driven and test driven development, and is passionate about creating quality software applications, on schedule and within budget. As a creative problem solver, Jennifer excels at taking ideas from concept through to implementation.</p>
+      </div>
+
+    </div><!-- .row -->
+  </div><!-- .container -->
+</section>
+<!-- Profile section end -->
+
+<!-- Callout section start -->
+<section id="stats" class="callout">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-12 hidden-xs wow bounceInLeft">
+        <h2>A Good Day</h2>
+      </div>
+
+      <div class="col-md-3 col-sm-4 wow bounceInDown">
+        <div class="stat">
+          <div class="stat-icon">
+            <h2><i class="fa fa-clock-o hidden-xs"></i><span class="timer" data-to="10"></span></h2>
+          </div>
+          <h3>hours tdd</h3>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 wow bounceInUp">
+        <div class="stat">
+          <div class="stat-icon">
+            <h2><i class="fa fa-bug hidden-xs"></i><span class="timer" data-to="0"></span></h2>
+          </div>
+          <h3>bugs released</h3>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-4 wow bounceInRight">
+        <div class="stat">
+          <div class="stat-icon">
+            <h2><i class="fa fa-refresh hidden-xs"></i><span class="timer" data-to="2"></span></h2>
+          </div>
+          <h3>hours hot yoga</h3>
+        </div>
+      </div>
+
+    </div><!-- .row -->
+  </div><!-- .container -->
+</section>
+<!-- Callout section end -->
+
+<!-- Services section start -->
+<!-- <section id="reasons" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 headline wow bounceInDown">
+        <h2>6 Reasons Why</h2>
+        <p>I Love This Profession.</p>
+      </div>
+
+      <div class="col-md-12">
         <div class="row">
-            <div class="col-md-6 home-about-text">
-                <h1 class="section-title">About</h1>
-                <p>Jennifer Nelson is a freelance web developer living in San Diego, California. She has experience with a variety of frameworks and languages, and has worked for startups as well as large corporations. </p>
+          <div class="col-sm-4 wow bounceInLeft">
+            <div class="service">
+              <div class="icon">
+                <i class="fa fa-pencil"></i>
+              </div>
+              <h4>Text rotator</h4>
+              <div class="text">
+                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+              </div>
+            </div>
+          </div>
 
-                <p>Jennifer believes in behavior-driven and test driven development, and is passionate about creating quality software applications, on schedule and within budget. As a creative problem solver, Jennifer excels at taking ideas from concept through to implementation.</p>
+          <div class="col-sm-4 wow bounceInUp">
+            <div class="service">
+              <div class="icon">
+                <i class="fa fa-image"></i>
+              </div>
+              <h4>Slideshow</h4>
+              <div class="text">
+                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+              </div>
+            </div>
+          </div>
 
-            </div> <!-- home-about-test -->
+          <div class="col-sm-4 wow bounceInRight">
+            <div class="service">
+              <div class="icon">
+                <i class="fa fa-cog"></i>
+              </div>
+              <h4>Easy configure</h4>
+              <div class="text">
+                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+              </div>
+            </div>
+          </div>
 
-            <div class="col-md-6 home-about-features">
-              <%= image_tag("JN.png", class: "img-responsive", alt: "Jennifer Nelson") %>
-            </div> <!-- home-about-features -->
-        </div> <!-- row -->
-    </div> <!-- cointainer -->
-</section> <!-- home-about -->
+        </div>
 
-<!-- Home Features -->
-<section id="home-features" class="home-section">
-    <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <article class="home-features-item hover">
-                    <div class="item-icon">
-                        <i class="fa fa-file-text-o"></i>
-                    </div>
-                    <div class="item-content">
-                        <h3>View Resume</h3>
-                        <p>View print, or download Jennifer Nelson's resume.</p>
-                        <a href="resume-jnelson.pdf" class="btn btn-transparent pull-right" target = "_blank">View resume</a>
-                    </div>
-                </article> <!-- home-features-item -->
-            </div>
-            <div class="col-sm-3">
-                <article class="home-features-item hover">
-                    <div class="item-icon">
-                        <i class="fa fa-linkedin"></i>
-                    </div>
-                    <div class="item-content">
-                        <div class="row">
-                            <h3>Connect on LinkedIn</h3>
-                        </div>
-                        <p>Learn more and connect with Jennifer Nelson on LinkedIn.</p>
-                        <a href="http://www.linkedin.com/pub/jennifer-wallick-nelson-pmp/8/840/658/" class="btn btn-transparent pull-right" target = "_blank">Go to LinkedIn</a>
-                    </div>
-                </article> <!-- home-features-item -->
-            </div>
-            <div class="col-sm-3">
-                <article class="home-features-item hover">
-                    <div class="item-icon">
-                        <i class="fa fa-github-square"></i>
-                    </div>
-                    <div class="item-content">
-                        <div class="row">
-                        <h3>Browse Code</h3>
-                        </div>
-                        <p>Browse the source code for Jennifer's MEAN Stack & RoR applications on GitHub.</p>
-                        <a href="http://github.com/jwncoexists" class="btn btn-transparent pull-right" target = "_blank">Go to GitHub</a>
-                    </div>
-                </article> <!-- home-features-item -->
-            </div>
-            <div class="col-sm-3">
-              <article class="home-features-item hover">
-                <div class="item-icon">
-                  <i class="fa fa-codepen"></i>
-                </div>
-                <div class="item-content">
-                  <div class="row">
-                    <h3>Visit Playground</h3>
-                  </div>
-                  <p>Explore where Jennifer loves trying out new ideas and spending her free time.</p>
-                  <a href="http://codepen.io/jwncoexists/" class="btn btn-transparent pull-right" target = "_blank">Go to CodePen</a>
-                </div>
-              </article> <!-- home-features-item -->
-            </div>
-        </div> <!--row -->
-    </div> <!-- container -->
-</section> <!-- home-features -->
 
-<section id="latest-works" class="home-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1 class="section-title text-center">Latest Works</h1>
-                <div class="row">
-
-                    <div class="col-md-4 col-sm-6">
-                        <figure class="caption caption-bottom hover">
-                            <%= image_tag("project2.jpg", class: "img-responsive", alt: "Image") %>
-                            <figcaption>
-                                <h3>Wedding Planning App</h3>
-                                <p>MEAN Stack</p>
-                                <a href="http://ujkk16f38f93.jwncoexists.koding.io:9000/" class="btn btn-transparent pull-right">Visit site</a>
-                            </figcaption>
-                        </figure>
-                    </div> <!-- col-md-4 -->
-                    <div class="col-md-4 col-sm-6">
-                        <figure class="caption caption-bottom hover">
-                            <%= image_tag("project4.jpg", class: "img-responsive", alt: "Image") %>
-                            <figcaption>
-                                <h3>Music Player</h3>
-                                <p>MEAN Stack</p>
-                                <a href="http://jn-bloc-jams-test.herokuapp.com" class="btn btn-transparent pull-right">Visit site</a>
-                            </figcaption>
-                        </figure>
-                    </div> <!-- col-md-4 -->
-                    <div class="col-md-4 col-sm-6 ">
-                      <figure class="caption caption-bottom hover">
-                        <%= image_tag("project1.jpg", class: "img-responsive", alt: "Image") %>
-                        <figcaption>
-                          <h3>HR e-learning app</h3>
-                          <p>RoR, postgreSQL</p>
-                          <a href="http://strategichr.drbobnelson.com" class="btn btn-transparent pull-right">Visit site</a>
-                        </figcaption>
-                      </figure>
-                    </div> <!-- col-md-4 -->
-                </div>
+          <div class="col-sm-4 wow bounceInUp" data-wow-delay=".2s">
+            <div class="service">
+              <div class="icon">
+                <i class="fa fa-code"></i>
+              </div>
+              <h4>Clear code</h4>
+              <div class="text">
+                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+              </div>
             </div>
-        </div> <!-- row -->
+          </div>
+
+          <div class="col-sm-4 wow bounceInUp" data-wow-delay=".4s">
+            <div class="service">
+              <div class="icon">
+                <i class="fa fa-desktop"></i>
+              </div>
+              <h4>Responsive design</h4>
+              <div class="text">
+                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 wow bounceInUp" data-wow-delay=".6s">
+            <div class="service">
+              <div class="icon">
+                <i class="fa fa-life-ring"></i>
+              </div>
+              <h4>Support</h4>
+              <div class="text">
+                <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-</section> <!-- latest-works -->
+  </div>
+</section> -->
+<!-- Services section end -->
+
+<!-- Portfolio section start -->
+<section id="portfolio" class="section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 headline wow bounceInDown">
+        <h2>Portfolio</h2>
+        <p>My best works.</p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 wow bounceInLeft">
+        <%= link_to 'http://usmc-tbsa168-reunion.org/', class: "pop-up", title: 'Marine Corps Reunion Site' do  %>
+          <div class="portfolio-item">
+            <div class="portfolio-item-preview">
+              <%= image_tag('tbsa168.jpg') %>
+            </div>
+            <div class="portfolio-item-description">
+              <h3>US Marine Corps Reunion</h3>
+              <p>Web App</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="col-md-4 col-sm-6 wow bounceInUp">
+        <%= link_to 'http://ujkk16f38f93.jwncoexists.koding.io:9000/', class: "pop-up", title: 'San Diego Wedding Planning' do  %>
+          <div class="portfolio-item">
+            <div class="portfolio-item-preview">
+              <%= image_tag('sdwedding.jpg') %>
+            </div>
+            <div class="portfolio-item-description">
+              <h3>Wedding Planning</h3>
+              <p>Web App</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="col-md-4 col-sm-6 wow bounceInRight">
+        <%= link_to 'http://strategichr.drbobnelson.com/', class: "pop-up", title: 'Online HR Training' do  %>
+          <div class="portfolio-item">
+            <div class="portfolio-item-preview">
+              <%= image_tag('strategichr.jpg') %>
+            </div>
+            <div class="portfolio-item-description">
+              <h3>Human Resources Training</h3>
+              <p>Web App</p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- <div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay=".2s">
+        <a href="assets/images/p5.jpg" class="pop-up" title="Caption 4">
+          <div class="portfolio-item">
+            <div class="portfolio-item-preview">
+              <img src="assets/images/p5.jpg" alt="">
+            </div>
+            <div class="portfolio-item-description">
+              <h3>Some work</h3>
+              <p>Category</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay=".4s">
+        <a href="assets/images/p8.jpg" class="pop-up" title="Caption 5">
+          <div class="portfolio-item">
+            <div class="portfolio-item-preview">
+              <img src="assets/images/p8.jpg" alt="">
+            </div>
+            <div class="portfolio-item-description">
+              <h3>Some work</h3>
+              <p>Category</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 wow bounceInUp" data-wow-delay=".6s">
+        <a href="assets/images/p6.jpg" class="pop-up" title="Caption 6">
+          <div class="portfolio-item">
+            <div class="portfolio-item-preview">
+              <img src="assets/images/p6.jpg" alt="">
+            </div>
+            <div class="portfolio-item-description">
+              <h3>Some work</h3>
+              <p>Category</p>
+            </div>
+          </div>
+        </a>
+      </div> -->
+
+    </div><!-- .row -->
+  </div><!-- .container -->
+</section>
+<!-- Portfolio section end -->

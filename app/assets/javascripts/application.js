@@ -12,13 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require bootstrap
+
+//= require 'bootstrap'
+//= require 'jquery.backstretch'
+//= require 'jquery.waypoints'
+//= require 'jquery.countTo'
+//= require 'jquery.fitvids'
+//= require 'jquery.magnific-popup'
+//= require 'jquery.simple-text-rotator'
+//= require 'smoothscroll'
+//= require 'wow'
+//= require 'custom'
+
 //= require_tree .
-//= require_tree ../../../vendor/assets/javascripts/.
-$(window).load(function() {
-    $('#aboutSlogan').addClass('animated lightSpeedIn');
-});
+
+
 $(document).ready(function() {
   $(".js-show-hide").click(function() {
     var selector = "." + $(this).attr('data-selector');
