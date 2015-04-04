@@ -386,6 +386,7 @@ h3 > .fa {
 }
 
 .mouse-icon {
+	color: #aaa;
 	position: relative;
 	border: 2px solid #fff;
 	border-radius: 16px;
@@ -397,6 +398,7 @@ h3 > .fa {
 }
 
 .mouse-icon .wheel {
+
 	-webkit-animation-name: drop;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: linear;
@@ -412,6 +414,7 @@ h3 > .fa {
 }
 
 .mouse-icon .wheel {
+	color: #aaa;
 	position: relative;
 	border-radius: 10px;
 	background: #fff;
