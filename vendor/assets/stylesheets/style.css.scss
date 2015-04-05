@@ -127,7 +127,8 @@ a,
 }
 
 .avatar {
-	margin-top: -50px;
+	margin-top: 40px;
+	margin-bottom: 15px;
 }
 /* ---------------------------------------------- /*
  * Inputs styles
@@ -608,7 +609,9 @@ h3 > .fa {
 
 .portfolio-item-preview, .portfolio-item-preview-in, .portfolio-item-preview-out {
 	position: relative;
-	border: 1px solid #bbb;
+	img {
+		border: 2px solid #bbb;
+	}
 }
 
 .portfolio-item:hover .portfolio-item-preview-in {
